@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Configuración de color para un look corporativo (Azul/Gris) -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f7f7f7;
@@ -22,7 +22,6 @@
         .bg-coppel-blue {
             background-color: #1f3a93;
         }
-        
         /* Estilos de tabla */
         .styled-table th, .styled-table td {
             padding: 0.75rem 0.5rem;
@@ -60,25 +59,24 @@
 </head>
 <body class="p-4 sm:p-8">
 
-    <!-- ENCABEZADO CON LOGO OFICIAL (URL REMOTA) -->
-    <!-- 
-         Nota para GitHub: Al usar una URL absoluta (https://...), el logo se cargará correctamente
-         incluso si el archivo HTML se mueve de carpeta o se visualiza en GitHub Pages.
-    -->
     <header class="mb-8 border-b-4 border-coppel-blue pb-4 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
             <h1 class="text-3xl sm:text-4xl font-extrabold text-coppel-blue">Presentación Proyectos</h1>
             <p class="text-lg text-gray-600 mt-1">02 Enero 2026 | 2 Proyectos 13 Incidencias</p>
         </div>
         
-        <!-- LOGO -->
-        <div class="flex-shrink-0">
-            <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Coppel_logo.svg/2560px-Coppel_logo.svg.png" 
-                alt="Logo Afore Coppel" 
-                class="h-16 w-auto object-contain"
-                onerror="this.src='https://cdn.worldvectorlogo.com/logos/coppel.svg'; this.onerror=null;"
-            >
+        <!-- LOGO CSS PURO (Optimizado para GitHub y visualización offline) -->
+        <!-- Contenedor estilizado tipo "tarjeta" como en la captura -->
+        <div class="flex-shrink-0 flex items-center gap-3 bg-white px-5 py-2 rounded-xl shadow-md border-2 border-indigo-50">
+            <div class="flex items-center gap-1">
+                <!-- Círculo Grande (Cabeza de la llave) -->
+                <div class="w-7 h-7 rounded-full bg-yellow-400"></div>
+                <!-- Círculo Chico 1 (Cuerpo) -->
+                <div class="w-4 h-4 rounded-full bg-yellow-400"></div>
+                <!-- Círculo Chico 2 (Diente) -->
+                <div class="w-4 h-4 rounded-full bg-yellow-400"></div>
+            </div>
+            <span class="text-xl font-bold tracking-tight" style="color: #1f3a93;">Afore Coppel</span>
         </div>
     </header>
 
@@ -91,27 +89,18 @@
             <div class="card p-5 bg-white rounded-lg border-t-4 border-red-600 text-center">
                 <h3 class="text-xl font-bold mt-1 text-gray-900">Rechazo PJ5 - FDEV</h3>
                 <p class="text-3xl font-extrabold text-red-600 mt-2">SIN AVANCE</p>
-                <p class="text-sm text-gray-500 mt-1">
-                    En espera de asignación de DEF
-                </p>
             </div>
 
             <!-- Proyecto 2: En Proceso -->
             <div class="card p-5 bg-white rounded-lg border-t-4 border-yellow-600 text-center">
                 <h3 class="text-xl font-bold mt-1 text-gray-900">Rechazo G-67</h3>
                 <p class="text-3xl font-extrabold text-yellow-600 mt-2">80% Avance</p>
-                <p class="text-sm text-gray-500 mt-1">
-                    9384895 - 22/12/2025 Teniendo problemas con la réplica de pruebas unitarias debido a temas con el menú Afore instalado en el laboratorio. Ellos están explorando opciones, incluyendo acercarse a Daniel Castro y al equipo de riesgos en la semana en curso.
-                </p>
             </div>
 
             <!-- Proyecto 3: Completado -->
             <div class="card p-5 bg-white rounded-lg border-t-4 border-green-600 text-center">
                 <h3 class="text-xl font-bold mt-1 text-gray-900">Registro por beneficiario con identificación oficial diferente de la INE. 11-1</h3>
                 <p class="text-3xl font-extrabold text-green-600 mt-2">85% Avance</p>
-                <p class="text-sm text-gray-500 mt-1">
-                    9061734 - Platicando con usuario pide un caso adicional que se presente. La temporalidad del año no ayudó para que se presentaran casos.Usuario con el que se está validando  Jose Adrian Lopez Berrelleza, daremos hasta el 9 de enero para conseguir ese nuevo caso.
-                </p>
             </div>
 
         </div>
