@@ -62,7 +62,7 @@
     <header class="mb-8 border-b-4 border-coppel-blue pb-4 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
             <h1 class="text-3xl sm:text-4xl font-extrabold text-coppel-blue">Presentación Proyectos</h1>
-            <p class="text-lg text-gray-600 mt-1">09 Enero 2026 | 2 Proyectos 12 Incidencias</p>
+            <p class="text-lg text-gray-600 mt-1">29 Enero 2026 | 2 Proyectos 12 Incidencias</p>
         </div>
         <!-- Nuevo Logotipo CSS personalizado -->
         <div class="flex-shrink-0 flex items-center gap-3">
@@ -95,18 +95,18 @@
             <!-- Proyecto 2: En Proceso -->
             <div class="card p-5 bg-white rounded-lg border-t-4 border-yellow-600 text-center">
                 <h3 class="text-xl font-bold mt-1 text-gray-900">Rechazo G-67</h3>
-                <p class="text-3xl font-extrabold text-yellow-600 mt-2">80% Avance</p>
+                <p class="text-3xl font-extrabold text-yellow-600 mt-2">90% Avance</p>
                 <p class="text-sm text-gray-500 mt-1">
-                    9384895 - 08/01/2026 Se capturaron las huellas de promotor con el apoyo de un tester de forma presencial en campus, sin embargo al poder validarlo en el laboratorio existe un problema de ambiente de estos equipos se está revisando el tema con Gustavo Lopez Cortez sobre el reporte de porque las máquinas del laboratorio no nos deja entrar al menú afore.
+                    9384895 - 29/01/2026, Comunicándose con el tester, comentó que continúa ambientando su equipo, aún no se puede realizar una afiliación completa, pero al punto donde lo tiene ambientado se puede comenzar, el día 27 de enero se empezarían las pruebas oficialmente.
                 </p>
             </div>
 
             <!-- Proyecto 3: Completado -->
             <div class="card p-5 bg-white rounded-lg border-t-4 border-green-600 text-center">
                 <h3 class="text-xl font-bold mt-1 text-gray-900">Registro por beneficiario con identificación oficial diferente de la INE. 11-1</h3>
-                <p class="text-3xl font-extrabold text-green-600 mt-2">90% Avance</p>
+                <p class="text-3xl font-extrabold text-green-600 mt-2">95% Avance</p>
                 <p class="text-sm text-gray-500 mt-1">
-                    9061734 - A partir del viernes 02 de enero se presentaron 2 casos nuevos exitoso y se está buscando el vobo de Jose Adrian para pasar al proceso de liberación.
+                    9061734 - 22/01/2026, Se liberó a nivel regional finalizando el monitoreo el 29 Enero.
                 </p>
             </div>
 
@@ -206,32 +206,31 @@
         // Tabla Izquierda: Incidencias en Atención
         const dataTopIncidencias = [
             // Se eliminó el primer registro (10308221)
-            { folio: "10407294", nombre: "Falla biométricos - Al realizar una afiliación, en la tabla enrolhuellastrabajador no se está insertando el dispositivo (queda vacío)", fase: "Pruebas" },
+            { folio: "10407294", nombre: "Falla biométricos - Al realizar una afiliación, en la tabla enrolhuellastrabajador no se está insertando el dispositivo (queda vacío)", fase: "Liberación" },
             { folio: "10568554", nombre: "Al hacer el envío de cartas por medio del Menú Operaciones la mayor parte de las cartas se está yendo por SMS", fase: "Validación ( Vo Bo para cierre )" },
-            { folio: "9061734", nombre: "Registro por beneficiario con identificación oficial diferente de la INE", fase: "Pruebas" },
-            { folio: "9384895", nombre: "Rechazo G67", fase: "Desarrollo" },
+            { folio: "9061734", nombre: "Registro por beneficiario con identificación oficial diferente de la INE", fase: "Monitoreo" },
+            { folio: "9384895", nombre: "Rechazo G67", fase: "Pruebas" },
             { folio: "9913760", nombre: "Inconsistencias en la calidad de Videos", fase: "RCA" },
-            { folio: "8669227", nombre: "Solicitudes sin Vigencia de los Documentos", fase: "RCA" },
-            { folio: "8605993", nombre: "Recupecacion de Renbios en el sistema MenuOficinasAfore ya que usuario los necesita ver en la tabla enrolcargarenvio", fase: "RCA" },
-            { folio: "10458837", nombre: "Para los trabajadores que están excepcionados en la solicitud de traspaso no se está planchando la huella del AP", fase: "RCA" }
+            { folio: "8669227", nombre: "Solicitudes sin Vigencia de los Documentos", fase: "Liberación" },
+            // Se eliminó el registro 8605993
+            { folio: "10458837", nombre: "Para los trabajadores que están excepcionados en la solicitud de traspaso no se está planchando la huella del AP", fase: "RCA" },
+            // NUEVO REGISTRO AGREGADO
+            { folio: "7752015", nombre: "Error al Generar la Consulta Integral.  Revisando la función aceptar(), no hay algo que detenga el flujo para los Tipo Solicitud 26, dado que solo valida que tenga enrolamiento y no consulta integral", fase: "RCA" }
         ];
 
         // Tabla Derecha: Incidencias en Espera de Atención (Antiguas)
         const dataServicio = [
-            // Se eliminó el registro 9913760
+            // Se eliminó el registro 7752015
             { folio: "9784277", descripcion: "Documentos incompletos que quedan en estatus 10-1 y 6-1", fecha: "15/09/2025" },
-            // Se eliminó el registro 10458837
-            // NUEVAS FILAS AGREGADAS
-            { folio: "7752015", descripcion: "Error al Generar la Consulta Integral.  Revisando la función aceptar(), no hay algo que detenga el flujo para los Tipo Solicitud 26, dado que solo valida que tenga enrolamiento y no consulta integral", fecha: "02/04/2025" },
-            { folio: "Rechazo PJ5, FDEV", descripcion: "En espera de confirmación sobre el DEF para su atención por parte de desarrollo", fecha: "BackOffice" },
-            // FIN NUEVAS FILAS
-            { folio: "11340437", descripcion: "RECHAZO P04 - Rechazo debido, a que el beneficiario no cuenta con un nombre en la solicitud de traspaso", fecha: "06/01/2026" }
+            { folio: "11220746", descripcion: "Falla en el Comparador OCR Traspasos", fecha: "23/12/2025" },
+            { folio: "11340437", descripcion: "RECHAZO P04 - Rechazo debido, a que el beneficiario no cuenta con un nombre en la solicitud de traspaso", fecha: "06/01/2026" },
+            { folio: "Rechazo PJ5, FDEV", descripcion: "En espera de confirmación sobre el DEF para su atención por parte de desarrollo", fecha: "BackOffice" }
         ];
 
         // Tabla Inferior: Proyectos Internos
         const dataProyectosInternos = [
             { folio: "1007295", proyecto: "COMPARADOR TRASPASOS AFORE MÓVIL / WEB", estatus: "En Desarrollo", fechaFin: "16/02/2025" },
-            { folio: "1007044", proyecto: "AJUSTES EN DOMICILIO REGISTRO Y TRASPASOS", estatus: "En Análisis", fechaFin: "TBD" }
+            { folio: "1007044", proyecto: "AJUSTES EN DOMICILIO REGISTRO Y TRASPASOS", estatus: "En Análisis", fechaFin: "16/02/2026" }
         ];
         
         // --- FUNCIONES DE RENDERIZADO ---
@@ -261,7 +260,7 @@
                 
                 if(item.fase === 'RCA') {
                     faseSpan.className += ' bg-red-100 text-red-800';
-                } else if (item.fase === 'Solución' || item.fase.includes('Validación')) {
+                } else if (item.fase === 'Solución' || item.fase.includes('Validación') || item.fase === 'Liberación') {
                     faseSpan.className += ' bg-green-100 text-green-800';
                 } else if (item.fase === 'Monitoreo') {
                     faseSpan.className += ' bg-blue-100 text-blue-800';
